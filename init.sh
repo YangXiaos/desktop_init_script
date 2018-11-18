@@ -7,4 +7,6 @@ add-apt-repository -y 'deb https://typora.io/linux ./'
 
 
 
+// wireshark下载
+apt-get -y install wireshark
 apt-get update   
