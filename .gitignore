@@ -1,0 +1,12 @@
+
+.idea/
+
+dist/
+
+desktop_init_script.egg-info/
+
+build/
+
+desktop_init_script/__pycache__/*
+
+.pytest_cache
