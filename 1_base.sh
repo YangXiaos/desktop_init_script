@@ -3,4 +3,4 @@
 
 apt-get update
 
-apt-get install -y curl vim git python3-pip nginx mongodb
+apt-get install -y curl vim git python3-pip
