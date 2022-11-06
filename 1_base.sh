@@ -14,7 +14,10 @@ deb-src http://mirrors.aliyun.com/debian-security/ buster/updates main non-free 
 " > /etc/apt/sources.list
 
 apt-get update
-apt-get install -y curl vim git python3-pip
+apt-get install -y curl vim git python3-pip apt-transport-https ca-certificates gnupg lsb-release
 
 echo "alias ll='ls -l'" >> /etc/profile
 echo "alias tf='tail -f'" >> /etc/profile
+
+curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://mirrors.aliyun.com/docker-ce/linux/debian
