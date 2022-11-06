@@ -20,4 +20,5 @@ echo "alias ll='ls -l'" >> /etc/profile
 echo "alias tf='tail -f'" >> /etc/profile
 
 curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://mirrors.aliyun.com/docker-ce/linux/debian
+echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://mirrors.aliyun.com/docker-ce/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
