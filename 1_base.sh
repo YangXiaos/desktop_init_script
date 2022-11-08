@@ -19,7 +19,7 @@ apt-get install -y curl vim git python3-pip apt-transport-https ca-certificates 
 echo "alias ll='ls -l'" >> /etc/profile
 echo "alias tf='tail -f'" >> /etc/profile
 
-read -n 1 -p '是否安装docker' is_install_docker
+read -n 1 -p "is install docker ?" is_install_docker
 if [[ $is_install_docker == "y" ]];
 then 
   curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
