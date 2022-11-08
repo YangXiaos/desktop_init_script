@@ -14,7 +14,7 @@ deb-src http://mirrors.aliyun.com/debian-security/ buster/updates main non-free 
 " > /etc/apt/sources.list
 
 apt-get update
-apt-get install -y curl vim git python3-pip apt-transport-https ca-certificates gnupg lsb-release
+apt-get install -y curl vim git python3-pip apt-transport-https ca-certificates gnupg lsb-release net-tools
 
 echo "alias ll='ls -l'" >> /etc/profile
 echo "alias tf='tail -f'" >> /etc/profile
